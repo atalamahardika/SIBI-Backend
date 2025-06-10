@@ -55,6 +55,8 @@ uvicorn app.main:app --reload
 | Method | Endpoint   | Deskripsi   |
 | ------ | ---------- | ----------- |
 | POST   | `/predict` | Menerima gambar & mengembalikan prediksi gesture |
+
+
 Contoh penggunaan bisa dikembangkan melalui frontend kamera atau aplikasi mobile.
 
 ## 🧠 Tentang Model
