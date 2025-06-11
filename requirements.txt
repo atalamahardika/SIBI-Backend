@@ -1,8 +1,8 @@
-fastapi==0.115.12
-uvicorn==0.34.3
-opencv_python_headless==4.11.0.86
-pillow==11.2.1
-tensorflow==2.19.0
-numpy==1.26.4
-python-multipart==0.0.20
-mediapipe==0.10.21
+fastapi
+uvicorn
+pillow
+tensorflow
+numpy
+python-multipart
+opencv_python_headless
+mediapipe
