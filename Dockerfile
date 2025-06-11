@@ -17,6 +17,6 @@ COPY . .
 # Force CPU only
 ENV CUDA_VISIBLE_DEVICES=""
 
-EXPOSE 8888
+EXPOSE 8080
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8888", "--reload", "--forwarded-allow-ips", "*"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080", "--reload", "--forwarded-allow-ips", "*"]
