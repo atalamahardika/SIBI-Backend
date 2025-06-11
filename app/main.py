@@ -24,3 +24,12 @@ async def predict(file: UploadFile = File(...)):
         return {"prediction": prediction}
     except ValueError as e:
         return {"error": str(e)}
+    
+# # Logging untuk debugging
+import logging
+
+try:
+    from app.utils.predict import predict_image
+except Exception as e:
+    logging.error(f"Error saat import predict_image: {e}")
+
