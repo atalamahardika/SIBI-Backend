@@ -1,10 +1,16 @@
+from fastapi.responses import RedirectResponse
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from app.utils.predict import predict_image
 from PIL import Image
 import io
+import logging
 
 app = FastAPI()
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+logger.info("🚀 Aplikasi FastAPI berhasil dimulai.")
 
 # CORS (izinkan akses dari Laravel)
 app.add_middleware(
@@ -24,12 +30,7 @@ async def predict(file: UploadFile = File(...)):
         return {"prediction": prediction}
     except ValueError as e:
         return {"error": str(e)}
-    
-# # Logging untuk debugging
-import logging
 
-try:
-    from app.utils.predict import predict_image
-except Exception as e:
-    logging.error(f"Error saat import predict_image: {e}")
-
+@app.get("/", include_in_schema=False)
+def root():
+    return RedirectResponse(url="/docs")
