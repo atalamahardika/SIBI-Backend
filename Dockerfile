@@ -14,6 +14,9 @@ RUN pip install --no-cache-dir --upgrade pip \
 
 COPY . .
 
+# Force CPU only
+ENV CUDA_VISIBLE_DEVICES=""
+
 EXPOSE 8888
 
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8888", "--reload", "--forwarded-allow-ips", "*"]
