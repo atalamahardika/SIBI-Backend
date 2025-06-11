@@ -15,7 +15,7 @@ logger.info("🚀 Aplikasi FastAPI berhasil dimulai.")
 # CORS (izinkan akses dari Laravel)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://sibi-frontend-production.up.railway.app/"],
+    allow_origins=["https://sibi-frontend-production.up.railway.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
