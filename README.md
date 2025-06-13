@@ -34,7 +34,7 @@ SIBI-Backend/
 1. **Clone repo**:
 
 ```bash
-git clone https://github.com/USERNAME/SIBI-Backend.git
+git clone https://github.com/atalamahardika/SIBI-Backend.git
 cd SIBI-Backend
 ``` 
 2. **Aktifkan virtual environment (opsional)**:
