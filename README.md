@@ -27,6 +27,7 @@ SIBI-Backend/
 │ ├── raw/ # Folder gambar mentah
 │ └── preprocess/ # Folder gambar hasil preprocessing
 ├── requirements.txt # Daftar dependensi Python
+├── Dockerfile # Dockerfile untuk membuat image container yang dijalankan pada environment production
 ```  
 ## 📦 Instalasi Lokal
 
